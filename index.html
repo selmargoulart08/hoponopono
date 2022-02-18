@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HO'OPONOPONO</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<h3><center>Contador</center></h3>
+<div>
+    <center><h3 id="counter-label">0</h3></center>
+</div>
+<center>
+    <div>
+        <button onclick="incrementClick()">Mais Um</button>
+        <button onclick="resetCounter()">Voltar</button>
+    </div>
+</center>
+
+<body onload="carregar()">
+    <header><h1>HO'OPONOPONO</h1></header>
+    <br>
+    <section>
+        <div class="txt">
+            <h1>eu sinto muito</h1>
+            <h1>me perdoe</h1>
+            <h1>eu te amo</h1>
+            <h1>sou grato</h1>
+            <p>Divino criador, pai, mãe, filho – todos em um. <br>
+            Se eu, minha família, os meus parentes e antepassados o ofendemos <br> Sua família, parentes e antepassados <br> em
+            pensamentos, fatos ou ações, <br> desde o início de nossa criação até o presente, <br> nós pedimos o Seu perdão. <br> Deixe
+            que isto se limpe, purifique, libere e corte <br> todas as memórias, bloqueios, energias e vibrações negativas. <br>
+            Transmute essas energias indesejáveis em pura Luz. <br> E assim é. <br>
+            Para limpar o meu subconsciente de toda a carga emocional armazenada nele, <br> digo uma e outra vez durante o
+            meu dia as palavras-chave do Ho’oponopono. </p>
+            <p><strong>EU SINTO MUITO, ME PERDOE, EU TE AMO, SOU GRATO.</strong></p>
+    </div>
+    <audio src = "music.mp3" controls autoplay = "true" loop></audio>
+    </section>
+<footer>
+    <p></p>
+</footer>
+</body>
+<script src = "script.js"></script>
+<script>
+var counterVal = 0;
+
+    function incrementClick() {
+        updateDisplay(++counterVal);
+    }
+    
+    function resetCounter() {
+        counterVal = 0;
+        updateDisplay(counterVal);
+    }
+    
+    function updateDisplay(val) {
+        document.getElementById("counter-label").innerHTML = val;
+    }</script>
+</html>

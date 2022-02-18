@@ -1,0 +1,57 @@
+body {
+      background-color: rgb(10, 10, 77);  
+      text-align: center;
+      background-image: url("meditar.jpg");
+      background-attachment: fixed;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: 100%;
+}
+header {
+    background-color: white;
+    font: bold 30px Arial; 
+    opacity: 75%;  
+    border-radius: 10px;
+    width: 600px;
+    margin: auto;
+    height: 75px;
+
+}
+section {
+    background-color: rgb(3, 55, 65);
+    color: rgb(248, 242, 242);
+    font: bold 18px Arial;
+    border-radius: 10px;
+    padding: 15px;
+    width: 500px;
+    margin: auto;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.61);
+
+}
+
+footer {
+    color: white;
+    text-align: center;
+    font-style: italic;
+
+}
+h3 {
+    color: rgb(240, 235, 192);
+    text-align: center;
+    color-interpolation-filters: inherit;
+    font-size: 30px;
+
+    
+}
+button {
+    font-family: arial;
+    font-size:14px;
+    font-weight:700;
+    text-transform: uppercase;
+    border: 5%;
+    padding:10px;
+    cursor: pointer;
+    display:inline-block;
+    text-decoration: none;
+    border-style:inherit;
+}
