@@ -8,13 +8,13 @@ body {
       background-size: 100%;
 }
 header {
-    background-color: white;
+    background-color: rgb(139, 88, 221);
     font: bold 30px Arial; 
-    opacity: 75%;  
+     
     border-radius: 10px;
-    width: 600px;
+    width: 300px;
     margin: auto;
-    height: 75px;
+    height: 50px;
 
 }
 section {
@@ -23,7 +23,7 @@ section {
     font: bold 18px Arial;
     border-radius: 10px;
     padding: 15px;
-    width: 500px;
+    width: 370px;
     margin: auto;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.61);
 
@@ -39,19 +39,41 @@ h3 {
     color: rgb(240, 235, 192);
     text-align: center;
     color-interpolation-filters: inherit;
-    font-size: 40px;
+    font-size: 25px;
 
     
 }
 button {
-    font-family: arial;
+    font-family:sans-serif;
     font-size:14px;
-    font-weight:700;
+    font-weight:4px;
     text-transform: uppercase;
     border: 5%;
-    padding:15px;
+    border-radius: 10px;
+    padding:10px;
     cursor: pointer;
     display:inline-block;
     text-decoration: none;
     border-style:inherit;
+    color: rgb(8, 10, 10);
+    background-color: rgb(219, 203, 56);
+}
+li {
+    text-align: left;
+}
+.text {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size-adjust: initial;
+}
+h1 {
+    font-size: larger;
+}
+footer {
+    font-style: italic;
+    font-size: 20px;
+    color:rgb(250, 252, 252)
+    
+}
+a {
+    color:rgb(250, 252, 252)
 }
