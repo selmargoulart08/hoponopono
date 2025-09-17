@@ -1,15 +1,17 @@
 {
-  "name": "Ho'oponopono",
-  "short_name": "Ho'oponopono App",
-  "start_url": "/hoponopono",
-  "display": "standalone",
   "background_color": "#ffffff",
-  "theme_color": "#000000",
+  "dir": "ltr",
+  "display": "standalone",
+  "name": "selmargoulart08.github",
+  "orientation": "any",
+  "scope": "/",
+  "short_name": "selmargoulart08.github",
+  "start_url": "/",
+  "theme_color": "#ffffff",
   "icons": [
     {
-      "src": "lotus.ico",
-      "sizes": "512x512",
-      "type": "image/ico"
+      "src": "https://selmargoulart08.github.io/hoponopono/lotus.ico",
+      "type": "imagex/png"
     }
   ]
 }
