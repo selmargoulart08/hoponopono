@@ -1,17 +1,20 @@
 {
-  "background_color": "#ffffff",
-  "dir": "ltr",
+  "name": "Ho'oponopono",
+  "short_name": "Ho'oponopono",
+  "start_url": "./",
   "display": "standalone",
-  "name": "selmargoulart08.github",
-  "orientation": "any",
-  "scope": "/",
-  "short_name": "selmargoulart08.github",
-  "start_url": "/",
-  "theme_color": "#ffffff",
+  "background_color": "#ffffff",
+  "theme_color": "#4caf50",
   "icons": [
     {
-      "src": "https://selmargoulart08.github.io/hoponopono/lotus.ico",
-      "type": "imagex/png"
+      "src": "logo-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "logo-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
     }
   ]
 }
