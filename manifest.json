@@ -1,0 +1,15 @@
+{
+  "name": "Ho'oponopono",
+  "short_name": "Ho'oponopono App",
+  "start_url": "/hoponopono",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#000000",
+  "icons": [
+    {
+      "src": "lotus.ico",
+      "sizes": "512x512",
+      "type": "image/ico"
+    }
+  ]
+}
