@@ -1,42 +1,41 @@
-// This is the "Offline page" service worker
+const CACHE_NAME = 'hoponopono-cache-v1';
 
-importScripts('https://storage.googleapis.com/workbox-cdn/releases/5.1.2/workbox-sw.js');
-
-// Lista de arquivos para pré-caching
-workbox.core.skipWaiting();
-workbox.core.clientsClaim();
-
-const urlsToPrecache = [
-  '/',
-  'index.html',
-  'estilo.css',
-  'script.js',
-  'music.mp3',
-  'lotus.ico',
-  'logo-192.png',
-  'logo-512.png',
-  'manifest.json',
-  'offline.html'
+// Lista de arquivos para armazenar em cache.
+// O PWA Builder analisará essa lista para saber quais arquivos tornar offline.
+const urlsToCache = [
+  '/hoponopono/',
+  '/hoponopono/index.html',
+  '/hoponopono/style.css',
+  '/hoponopono/script.js',
+  '/hoponopono/logo-192.png',
+  '/hoponopono/logo-512.png',
+  '/hoponopono/lotus.ico',
+  '/hoponopono/music.mp3'
 ];
 
-workbox.precaching.precacheAndRoute(urlsToPrecache);
+// Instalação do Service Worker e armazenamento dos arquivos
+self.addEventListener('install', event => {
+  event.waitUntil(
+    caches.open(CACHE_NAME)
+      .then(cache => {
+        console.log('Cache aberto, adicionando arquivos...');
+        return cache.addAll(urlsToCache);
+      })
+  );
+});
 
-// Regra de fallback para quando o usuário estiver offline
-const offlineFallbackPage = 'offline.html';
-
-self.addEventListener('fetch', (event) => {
-  if (event.request.mode === 'navigate') {
-    event.respondWith(
-      (async () => {
-        try {
-          const networkResponse = await fetch(event.request);
-          return networkResponse;
-        } catch (error) {
-          const cache = await caches.open(workbox.core.cacheNames.precache);
-          const cachedResponse = await cache.match(offlineFallbackPage);
-          return cachedResponse;
+// Intercepta as requisições de rede
+self.addEventListener('fetch', event => {
+  event.respondWith(
+    caches.match(event.request)
+      .then(response => {
+        // Se o arquivo estiver no cache, ele o retorna
+        if (response) {
+          return response;
         }
-      })()
-    );
-  }
+
+        // Caso contrário, busca na rede
+        return fetch(event.request);
+      })
+  );
 });
