@@ -7,10 +7,10 @@
     <title>HO'OPONOPONO</title>
     <link rel="shortcut icon" type="imagex/png" href="lotus.ico">
     <link rel="stylesheet" href="estilo.css">
-    <link rel="manifest" href="/manifest.json">
+    <link rel="/manifest" href="./manifest.json">
     <script>
     if ('serviceWorker' in navigator) {
-        navigator.serviceWorker.register('/service-worker.js')
+        navigator.serviceWorker.register('./service-worker.js')
         .then((reg) => console.log('Service worker registered.', reg))
         .catch((err) => console.error('Service worker registration failed:', err));
     }
