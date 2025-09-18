@@ -1,7 +1,7 @@
 {
   "name": "Ho'oponopono",
   "short_name": "Ho'oponopono",
-  "start_url": "/hoponopono/",
+  "start_url": "/hoponopono/index.html",
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#4caf50",
@@ -19,3 +19,4 @@
   ]
 
 }
+
