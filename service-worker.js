@@ -3,7 +3,6 @@ const CACHE_NAME = 'hoponopono-cache-v1';
 // Lista de arquivos para armazenar em cache.
 // O PWA Builder analisará essa lista para saber quais arquivos tornar offline.
 const urlsToCache = [
-  '/hoponopono/',
   '/hoponopono/index.html',
   '/hoponopono/style.css',
   '/hoponopono/script.js',
@@ -39,3 +38,4 @@ self.addEventListener('fetch', event => {
       })
   );
 });
+
